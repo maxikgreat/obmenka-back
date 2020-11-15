@@ -1,0 +1,56 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type AdditionalUserInfo {
+  phoneNumber: String!
+  email: String!
+  isAdmin: Boolean!
+}
+
+type User {
+  id: ID!
+  image: String
+  name: String!
+  additionalUserInfo: AdditionalUserInfo
+}
+
+type Client {
+  id: String!
+  user: User!
+}
+
+type Account {
+  user: User!
+  info: AdditionalUserInfo!
+}
+
+type Rate {
+  id: ID!
+  name: String!
+  buy: Float!
+  sell: Float!
+  type: String!
+  isCross: Boolean
+}
+
+type Query {
+  clients: [Client!]!
+  clientById(clientId: ID!): Client!
+  myAccount: Account!
+  rateById(id: String!): Rate!
+  rates: [Rate!]!
+}
+
+type Mutation {
+  updateClientInformation(phoneNumber: String!, email: String!, name: String!, id: ID!): Boolean!
+  updateMyAccount(user: UserUpdateRequest!): Account!
+  updateMyAccountImage(image: String!): Boolean!
+  updateRate(sell: Float!, buy: Float!, id: ID!): Boolean!
+}
+
+input UserUpdateRequest {
+  name: String!
+  email: String!
+  phoneNumber: String!
+}
