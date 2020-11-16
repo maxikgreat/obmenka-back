@@ -8,7 +8,7 @@
     "compile": "tsc -p ./tsconfig.json --noEmit",
     "prebuild": "rimraf dist && npm i @nestjs/cli -g",
     "build": "nest build",
-    "start": "nest start --watch",
+    "start": "node dist/main",
     "start:prod": "node dist/main",
     "lint": "eslint './**/*.{ts,tsx}'",
     "update-localization": "node scripts/update-localization.js",
