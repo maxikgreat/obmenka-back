@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "compile": "tsc -p ./tsconfig.json --noEmit",
-    "prebuild": "rimraf dist && npm i @nestjs/cli -g mkdir files",
+    "prebuild": "rimraf dist && npm i @nestjs/cli -g && mkdir files",
     "build": "nest build -p tsconfig.build.json",
     "start": "node dist/main",
     "start:prod": "node dist/main",
