@@ -25,12 +25,12 @@ services:
       - 80:80
     environment:
       NODE_ENV: testing
-      DATABASE_HOST: db
+      DATABASE_HOST: ec2-46-137-177-160.eu-west-1.compute.amazonaws.com
       DATABASE_PORT: 5432
-      DATABASE_USERNAME: exchange_backyard
-      DATABASE_PASSWORD: magicmore
-      DATABASE_NAME: exchange
-      FILE_STORAGE_ROOT_DIRECTORY: files
+      DATABASE_USERNAME: lfivxwpybbsuez
+      DATABASE_PASSWORD: 57e2446834ba4157f634019185d0d382afb539495325752fbea76150453e4e6e
+      DATABASE_NAME: dcdldfsa6gr68b
+      PORT: 3000
 volumes:
   db:
 networks:

@@ -4,12 +4,13 @@ services:
   db:
     image: postgres:12.2
     ports:
-      - 5432:5432
+      - 80:80
     volumes:
       - db:/var/lib/postgresql/data
     environment:
-      POSTGRES_USER: exchange_backyard
-      POSTGRES_PASSWORD: magicmore
-      POSTGRES_DB: exchange
+      POSTGRES_USER: lfivxwpybbsuez
+      POSTGRES_PASSWORD: 57e2446834ba4157f634019185d0d382afb539495325752fbea76150453e4e6e
+      POSTGRES_DB: dcdldfsa6gr68b
+      PORT: 3000
 volumes:
   db:

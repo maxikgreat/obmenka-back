@@ -6,8 +6,6 @@ import {AuthModule} from './auth/AuthModule';
 import {ServicesModule} from 'services/ServicesModule';
 import IUserManager from './user/IUserManager';
 import UserManager from './user/UserManager';
-import IFileManager from './file/IFileManager';
-import FileManager from './file/FileManager';
 import IRateManager from './rate/IRateManager';
 import RateManager from './rate/RateManager';
 
@@ -20,10 +18,6 @@ import RateManager from './rate/RateManager';
   ],
   providers: [
     {
-      provide: IFileManager,
-      useClass: FileManager,
-    },
-    {
       provide: IAccountManager,
       useClass: AccountManager,
     },
@@ -32,21 +26,15 @@ import RateManager from './rate/RateManager';
       useClass: UserManager,
     },
     {
-      provide: IFileManager,
-      useClass: FileManager,
-    },
-    {
       provide: IRateManager,
       useClass: RateManager,
     },
   ],
   exports: [
-    IFileManager,
     AuthModule,
     IAccountManager,
     IUserManager,
     AuthModule,
-    IFileManager,
     IRateManager,
   ],
 })
